@@ -52,7 +52,7 @@ Date: August 2026
     *   [Requesting Additions 📝](#requesting-additions)
 *   [License 📜](#license)
 *   [Important Links 🔗](#important-links)
-*   [Copyright ©️](#copyright)
+*   [Attribution ℹ️️](#attribution)
 
 ---
 
@@ -63,7 +63,13 @@ Date: August 2026
 
 
 
-**Rescue Retriever** a search-and-rescue candidate dashboard that turns Austin Animal Center shelter data into filterable rescue-program matches, animal details, analytics, maps, and exportable reports.
+
+
+**Rescue Retriever** is a search-and-rescue candidate dashboard built around Austin Animal Center shelter data. It gives rescue staff a practical way to search animals, filter them against water-rescue, mountain/wilderness, and disaster/tracking criteria, review the reasons behind each match, and move from a large dataset to a smaller group of realistic candidates.
+
+I designed the project as an information-heavy working dashboard rather than a simple record viewer. Candidate profiles, rescue-program logic, charts, geographic views, sorting, pagination, and CSV export all support the same decision-making workflow, so someone can investigate an animal from several angles without jumping between disconnected tools.
+
+The interface also treats the matching logic as something that should be understandable, not mysterious. Rescue Retriever surfaces the characteristics behind a recommendation and pairs them with the underlying animal details, which makes the system more useful for review, comparison, reporting, and follow-up.
 
 </details>
 
@@ -74,8 +80,8 @@ Date: August 2026
 
 
 
-I built Rescue Retriever to make a large shelter dataset useful for a specific decision instead of leaving it as rows in a table. The application applies the selection criteria for water rescue, mountain and wilderness rescue, and disaster or individual tracking, then gives the user several ways to inspect the animals that match. The goal is to make the reasoning behind each match visible through filters, animal details, program profiles, maps, charts, and reports.
 
+I created **Rescue Retriever** to help animal-rescue organizations identify shelter dogs that may be good candidates for specialized rescue work. Large shelter datasets contain useful information, but manually sorting through those records makes it difficult to compare animals against the characteristics needed for water rescue, mountain and wilderness rescue, or disaster and tracking roles. Rescue Retriever turns those records into searchable matches, profiles, maps, charts, and reports so rescue staff can review candidates more efficiently and understand why each animal matched a particular program.
 </details>
 
 <a id="design-style-and-inspiration"></a>
@@ -96,20 +102,24 @@ Rescue Retriever is designed around the information people need when comparing r
 
 
 
+
+
 I pulled the palette below directly from the current project stylesheet `assets/main.css`.
 
-| Hex | Color Name | Primary Use |
+Each row lists every interface-use category identified for that exact color value in the documented stylesheet analysis. When one hex value is reused for several jobs, I keep all of those uses together in the same row instead of reducing it to a single generic label.
+
+| Hex | Color Name | Complete Use in the Interface |
 | --- | --- | --- |
-| `#F47920` | Rescue Orange | Primary actions, highlights, chart accents, focus rings, and branded emphasis |
-| `#1A2F5E` | Rescue Navy | Primary brand structure, headings, sidebar surfaces, and dark interface areas |
+| `#F47920` | Rescue Orange | Primary actions; highlights; chart accents; focus rings; and branded emphasis |
+| `#1A2F5E` | Rescue Navy | Primary brand structure; headings; sidebar surfaces; and dark interface areas |
 | `#0D1B38` | Deep Navy | Primary foreground color and deepest dark backgrounds |
-| `#2BBCD4` | Rescue Teal | Secondary accent, charts, interactive details, and focus treatments |
+| `#2BBCD4` | Rescue Teal | Secondary accent; charts; interactive details; and focus treatments |
 | `#F6F8FB` | Surface | Main light page background and large neutral surfaces |
-| `#EEF2F8` | Alternate Surface | Muted panels, secondary controls, separators, and supporting surfaces |
+| `#EEF2F8` | Alternate Surface | Muted panels; secondary controls; separators; and supporting surfaces |
 | `#F8A058` | Light Orange | Orange gradients and lighter branded highlights |
 | `#253D7A` | Light Navy | Secondary navy surfaces and dark-mode supporting areas |
-| `#60D4E8` | Light Teal | Lighter teal gradients, charts, and highlights |
-| `#D8E0EE` | Border | Borders, input outlines, and subtle structure |
+| `#60D4E8` | Light Teal | Lighter teal gradients; charts; and highlights |
+| `#D8E0EE` | Border | Borders; input outlines; and subtle structure |
 
 </details>
 
@@ -450,18 +460,22 @@ No license terms are assumed here. If the repository includes a `LICENSE` file, 
 
 ---
 
-<a id="copyright"></a>
+<a id="attribution"></a>
 
 <details open>
-<summary><h2><strong>Copyright ©️</strong></h2></summary>
+<summary><h2><strong>Attribution ℹ️</strong></h2></summary>
 
 
+Project documentation and original project materials are credited to their respective sources where applicable.
 
-© 2026 Alysha Pursley. Project documentation and original project materials are credited to their respective sources where applicable.
-
+</details>
 
 ---
 
-Made with care by Alysha Pursley.
+<div align=center>
+   
+***Made with ❤️ and a bit of 🪄.***
+<br>
+**©️ 2026 Alysha Pursley. All Rights Reserved.**
 
-</details>
+</div>
