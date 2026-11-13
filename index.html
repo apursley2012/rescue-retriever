@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Redirects visitors from the site root to the main Rescue          |
+  | Retriever page and supplies the top-level document metadata.               |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rescue Retriever | Search &amp; Rescue Dog Matching</title>
+    <meta name="description" content="Rescue Retriever helps identify Austin Animal Center shelter dogs whose breed, sex, and age align with defined search-and-rescue training profiles." />
+    <meta name="author" content="Alysha Pursley" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1A2F5E" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rescue Retriever | Search &amp; Rescue Dog Matching" />
+    <meta property="og:description" content="Explore Austin Animal Center shelter records and identify dogs that match defined search-and-rescue training profiles." />
+    <meta property="og:image" content="./assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rescue Retriever | Search &amp; Rescue Dog Matching" />
+    <meta name="twitter:description" content="Explore Austin Animal Center shelter records and identify dogs that match defined search-and-rescue training profiles." />
+    <script type="module" crossorigin="" src="./runtime/router.js"></script>
+    <link rel="modulepreload" crossorigin="" href="./components/ui/accordion.js" />
+    <link rel="modulepreload" crossorigin="" href="./hooks/use-mobile.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/index.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/index3.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/ui/tooltip.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/createLucideIcon.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/ui/sonner.js" />
+    <link rel="modulepreload" crossorigin="" href="./hooks/use-toast.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/index2.js" />
+    <link rel="modulepreload" crossorigin="" href="./lib/utils.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/x.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/ui/toast.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/ui/toaster.js" />
+    <link rel="modulepreload" crossorigin="" href="./assets/chunk-KS7C4IRE.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/layout/Footer.js" />
+    <link rel="modulepreload" crossorigin="" href="./components/layout/Navigation.js" />
+    <link rel="modulepreload" crossorigin="" href="./data/animals.js" />
+    <link rel="modulepreload" crossorigin="" href="./data/rescueProfiles.js" />
+    <link rel="modulepreload" crossorigin="" href="./lib/filterUtils.js" />
+    <link rel="modulepreload" crossorigin="" href="./data/articles.js" />
+    <link rel="stylesheet" crossorigin="" href="./assets/main.css" />
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/pages/home.css" />
+    <link rel="stylesheet" href="./styles/pages/analytics.css" />
+    <link rel="stylesheet" href="./styles/pages/dashboard.css" />
+    <link rel="stylesheet" href="./styles/pages/articles.css" />
+    <link rel="stylesheet" href="./styles/pages/article-detail.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="root">
+      <noscript>
+        <main class="noscript-message" id="main-content" tabindex="-1">
+          <h1>Rescue Retriever</h1>
+          <p>Rescue Retriever identifies shelter dogs with potential for search-and-rescue training using a static Austin Animal Center dataset. JavaScript is required for interactive filtering, candidate details, analytics, and CSV exports.</p>
+        </main>
+      </noscript>
+    </div>
+  </body>
+</html>

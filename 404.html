@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Displays a branded, accessible not-found page with links back to  |
+  | the site when a requested URL is unavailable.                              |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="The requested Rescue Retriever page could not be found." />
+    <meta name="theme-color" content="#1a2f5e" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <title>Page Not Found | Rescue Retriever</title>
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="./styles/pages/not-found.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="site-brand" href="./pages/home.html" aria-label="Rescue Retriever home">
+        <img src="./assets/logo.png" alt="" width="698" height="852" />
+        <span>Rescue <strong>Retriever</strong></span>
+      </a>
+    </header>
+    <main id="main-content" class="not-found" tabindex="-1">
+      <section class="not-found-card" aria-labelledby="not-found-title">
+        <div class="status-code" aria-hidden="true">404</div>
+        <p class="eyebrow">This trail ends here</p>
+        <h1 id="not-found-title">We couldn't find that page.</h1>
+        <p>The link may have changed, or the page may no longer exist. You can head back to Rescue Retriever and keep exploring shelter-dog candidates.</p>
+        <div class="actions">
+          <a class="primary-button" href="./pages/home.html">Back to home</a>
+          <a class="secondary-button" href="./pages/dashboard.html">Explore candidates</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Rescue Retriever · Static portfolio demonstration</span>
+      <nav aria-label="Legal information">
+        <a href="./pages/privacy.html">Privacy</a>
+        <a href="./pages/terms.html">Terms</a>
+      </nav>
+    </footer>
+  </body>
+</html>
