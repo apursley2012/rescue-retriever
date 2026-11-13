@@ -1,0 +1,9 @@
+# Rescue Retriever | Dependencies for the original Python/Dash dashboard.
+# These packages support database CRUD, notebook UI, maps, and charts.
+# Maintainer: Alysha Pursley.
+pymongo
+jupyter-dash
+dash
+dash-leaflet
+pandas
+plotly
