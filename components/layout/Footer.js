@@ -98,7 +98,7 @@ function Footer() {
       }), e.jsxs("div", {
         className: "border-t border-[#1A2F5E] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4",
         children: [e.jsx("p", {
-          className: "text-[#4A5B7A] text-xs", children: `© ${currentYear} Alysha Pursley. Original contributions proprietary.`
+          className: "text-[#4A5B7A] text-xs", children: `© ${currentYear} Alysha Pursley. All Rights Reserved.`
         }), e.jsxs("div", {
           className: "flex items-center gap-2 text-[#4A5B7A] text-xs", children: [e.jsx(o, {
             className: "w-3.5 h-3.5 text-[#F47920]"
