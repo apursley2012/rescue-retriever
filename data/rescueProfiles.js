@@ -1,0 +1,89 @@
+/**
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Defines the rescue-screening criteria shared by candidate         |
+ * | matching, reports, and profile documentation.                              |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ */
+/*
+ * The descriptive export is the maintainable source; the abbreviated alias is
+ * retained because recovered runtime code imports that compatibility name.
+ */
+const rescueProfiles = [
+  {
+    id: "water",
+    name: "Water Rescue",
+    shortName: "Water",
+    description: "Specialized dogs trained to locate and assist individuals in distress in aquatic environments, including rivers, lakes, and coastal waters.",
+    longDescription: "Water rescue dogs undergo intensive aquatic training to develop swimming endurance, directional navigation, and victim detection in open water. These dogs work alongside certified rescue divers and boat crews to maximize search coverage. Their powerful retrieving instincts and webbed paws make certain breeds uniquely suited to extended water operations.",
+    color: "#DF5A1A",
+    bgColor: "#FFF1E8",
+    textColor: "#B7430E",
+    borderColor: "#F6A47C",
+    icon: "Waves",
+    breeds: ["Labrador Retriever Mix", "Chesapeake Bay Retriever", "Newfoundland"],
+    sex: "Intact Female",
+    minAgeWeeks: 26,
+    maxAgeWeeks: 156,
+    capabilities: [
+      "Open-water victim search",
+      "Dive team coordination",
+      "Shoreline victim detection",
+      "Flood rescue support",
+      "Maritime search operations"
+    ],
+    environment: "Rivers, lakes, coastal waters, flood zones"
+  },
+  {
+    id: "mountain",
+    name: "Mountain or Wilderness Rescue",
+    shortName: "Mountain",
+    description: "Rugged, high-endurance dogs built for challenging terrain searches including mountain wilderness, dense forest, and remote backcountry operations.",
+    longDescription: "Mountain and wilderness rescue dogs are trained to navigate extreme topographies while tracking human scent over long distances. Their high drive, physical stamina, and cold-weather resilience make them indispensable for lost-hiker searches, avalanche recovery, and extended backcountry operations. These dogs often operate in teams with handlers and support crews.",
+    color: "#087F8C",
+    bgColor: "#E6F6F4",
+    textColor: "#066771",
+    borderColor: "#69C5C3",
+    icon: "Mountain",
+    breeds: ["German Shepherd", "Alaskan Malamute", "Old English Sheepdog", "Siberian Husky", "Rottweiler"],
+    sex: "Intact Male",
+    minAgeWeeks: 26,
+    maxAgeWeeks: 156,
+    capabilities: [
+      "Avalanche victim detection",
+      "Off-trail tracking",
+      "High-altitude operations",
+      "Extended wilderness search",
+      "Night search operations"
+    ],
+    environment: "Mountains, forests, backcountry, snow terrain"
+  },
+  {
+    id: "disaster",
+    name: "Disaster Rescue or Individual Tracking",
+    shortName: "Disaster",
+    description: "Prospective tracking and disaster-response dogs that may be trained to locate individuals in urban rubble, collapsed structures, and mass-casualty scenarios.",
+    longDescription: "Disaster rescue and individual tracking dogs represent the most versatile classification in Rescue Retriever. Specialist training can teach these dogs to isolate a specific human scent signature and follow it through chaotic, high-stimulation environments including collapsed buildings, disaster rubble, and densely populated urban areas. Their extended age range reflects the broader screening criteria in the supplied client specification.",
+    color: "#6D3DB8",
+    bgColor: "#F1EAFC",
+    textColor: "#59309A",
+    borderColor: "#B69AE2",
+    icon: "Flame",
+    breeds: ["Doberman Pinscher", "German Shepherd", "Golden Retriever", "Bloodhound", "Rottweiler"],
+    sex: "Intact Male",
+    minAgeWeeks: 20,
+    maxAgeWeeks: 300,
+    capabilities: [
+      "Structural collapse search",
+      "Individual scent tracking",
+      "Urban disaster response",
+      "Mass-casualty triage support",
+      "Missing persons location"
+    ],
+    environment: "Urban rubble, collapsed structures, disaster zones"
+  }
+];
+export { rescueProfiles, rescueProfiles as R };
