@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Loads the candidate reporting view directly and provides readable |
+  | page content without JavaScript.                                           |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/reports" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Review rescue-program candidate summaries and export matching Austin Animal Center dog records for offline evaluation and rescue-team coordination." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Candidate Reports &amp; Exports | Rescue Retriever Data" property="og:title" />
+    <meta content="Review dog-only rescue qualification summaries and export candidate information." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Candidate Reports &amp; Exports | Rescue Retriever Data" name="twitter:title" />
+    <meta content="Review dog-only rescue qualification summaries and export candidate information." name="twitter:description" />
+    <title>Candidate Reports &amp; Exports | Rescue Retriever Data</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a aria-current="page" href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Data exports</span>
+          <h1>Reports</h1>
+          <p>Download filtered candidate lists as CSV files for offline review and rescue-team coordination.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Available reports</h2>
+          <div class="rr-card-grid">
+            <article class="rr-card rr-report-card">
+              <h3>Water Rescue Candidates</h3>
+              <p>Strict matches for the Water Rescue profile.</p>
+              <p class="rr-meta">17 records · CSV · Includes program classification</p>
+              <a class="rr-static-button" href="dashboard.html?filter=water">Review candidates</a>
+            </article>
+            <article class="rr-card rr-report-card">
+              <h3>Mountain/Wilderness Candidates</h3>
+              <p>Strict matches for the Mountain or Wilderness profile.</p>
+              <p class="rr-meta">5 records · CSV · Includes program classification</p>
+              <a class="rr-static-button" href="dashboard.html?filter=mountain">Review candidates</a>
+            </article>
+            <article class="rr-card rr-report-card">
+              <h3>Disaster/Tracking Candidates</h3>
+              <p>Strict matches for the Disaster Rescue or Individual Tracking profile.</p>
+              <p class="rr-meta">4 records · CSV · Includes program classification</p>
+              <a class="rr-static-button" href="dashboard.html?filter=disaster">Review candidates</a>
+            </article>
+          </div>
+        </section>
+        <section class="rr-static-section">
+          <h2>Export behavior</h2>
+          <p>The interactive version builds CSV output from the same active records and criteria used by the dashboard so exported candidate lists do not drift from the on-screen results.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

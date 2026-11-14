@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Loads the rescue analytics dashboard directly, with fallback      |
+  | descriptions of its visual summaries.                                      |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/analytics" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Explore dog-only breed, age, sex, and rescue-qualification charts calculated from the bundled Austin Animal Center records." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Candidate Analytics | Rescue Retriever Insights" property="og:title" />
+    <meta content="Explore dog-only breed composition, sex and sterilization status, age distribution, and rescue qualification statistics." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Candidate Analytics | Rescue Retriever Insights" name="twitter:title" />
+    <meta content="Explore dog-only breed composition, sex and sterilization status, age distribution, and rescue qualification statistics." name="twitter:description" />
+    <title>Rescue Candidate Analytics | Rescue Retriever Insights</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/analytics.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a aria-current="page" href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Data intelligence</span>
+          <h1>Analytics</h1>
+          <p>Dog-only breed, sex, age, and rescue-qualification comparisons using the same screening criteria as the dashboard.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Dataset overview</h2>
+          <div class="rr-card-grid">
+            <article class="rr-card rr-stat"><strong>5,589</strong> <span>Dog records</span></article>
+            <article class="rr-card rr-stat"><strong>24</strong> <span>Unique strict rescue candidates</span></article>
+            <article class="rr-card rr-stat"><strong>3</strong> <span>Program profiles</span></article>
+          </div>
+        </section>
+        <section class="rr-static-section rr-analytics-grid">
+          <h2>Analysis views</h2>
+          <div class="rr-card-grid">
+            <article class="rr-card">
+              <h3>Most Common Breed Labels</h3>
+              <p>Breed composition for dog records only.</p>
+              <div class="rr-analytics-bar rr-analytics-bar--breeds"><span> </span></div>
+            </article>
+            <article class="rr-card">
+              <h3>Dog Age Distribution</h3>
+              <p>Age groups are compared using months and years; the selected-dog map remains on the Dashboard.</p>
+              <div class="rr-analytics-bar rr-analytics-bar--ages"><span> </span></div>
+            </article>
+            <article class="rr-card">
+              <h3>Rescue Program Candidates</h3>
+              <p>17 Water, 5 Mountain/Wilderness, and 4 Disaster/Tracking matches. Some animals can qualify for more than one profile.</p>
+            </article>
+            <article class="rr-card">
+              <h3>Sex Distribution</h3>
+              <p>Recorded sex and sterilization categories for dog records only.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

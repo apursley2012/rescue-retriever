@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Loads a selected long-form article through its own direct URL and |
+  | displays a fallback when scripts cannot run.                               |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/articles/:id" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Read a Rescue Retriever research and development article about shelter-data analysis, rescue-candidate matching, design, implementation decisions, and notes." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Retriever Article | Research, Data &amp; Development" property="og:title" />
+    <meta content="Read a Rescue Retriever research and development article about shelter-data analysis, rescue-candidate matching, design, implementation decisions, and notes." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Retriever Article | Research, Data &amp; Development" name="twitter:title" />
+    <meta content="Read a Rescue Retriever research and development article about shelter-data analysis, rescue-candidate matching, design, implementation decisions, and notes." name="twitter:description" />
+    <title>Rescue Retriever Article | Research, Data &amp; Development</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/article-detail.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Article</span>
+          <h1>Rescue Retriever Article</h1>
+          <p>The article selected by the <code> id </code> query parameter is rendered here by the page controller.</p>
+        </section>
+        <article class="rr-card rr-article-static-body">
+          <h2>Direct article entry</h2>
+          <p>Older article-detail links are supported for compatibility. Each article now has its own dedicated page, accessible from the Articles index.</p>
+          <p><a href="articles.html">Return to all articles</a></p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

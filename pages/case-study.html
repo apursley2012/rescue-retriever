@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Provides a directly accessible case study page with semantic      |
+  | fallback content and interactive page mounting.                            |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/case-study" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Read how Rescue Retriever organizes shelter data, applies rescue qualification rules, presents candidate results, and supports a static browser demonstration." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Retriever Case Study | Design, Data &amp; Decisions" property="og:title" />
+    <meta content="Read how Rescue Retriever organizes shelter data, applies rescue qualification rules, presents candidate results, and supports a static browser demonstration." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Retriever Case Study | Design, Data &amp; Decisions" name="twitter:title" />
+    <meta content="Read how Rescue Retriever organizes shelter data, applies rescue qualification rules, presents candidate results, and supports a static browser demonstration." name="twitter:description" />
+    <title>Rescue Retriever Case Study | Design, Data &amp; Decisions</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/articles.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a aria-current="page" href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Project documentation</span>
+          <h1>Case Study</h1>
+          <p>How Rescue Retriever turns shelter records and client-defined rescue criteria into a reviewable candidate-screening workflow.</p>
+        </section>
+        <section class="rr-static-section rr-case-study-flow">
+          <h2>Project flow</h2>
+          <div class="rr-card-grid">
+            <article class="rr-card">
+              <h3>Define the screening problem</h3>
+              <p>Thousands of shelter records make manual comparison against multiple rescue profiles slow and inconsistent.</p>
+            </article>
+            <article class="rr-card">
+              <h3>Centralize the rescue criteria</h3>
+              <p>Breed, sex, and age rules are kept in one shared data module instead of being repeated across pages.</p>
+            </article>
+            <article class="rr-card">
+              <h3>Reuse one matching layer</h3>
+              <p>Dashboard results, details, analytics, reports, and exports use the same shared business-rule helpers.</p>
+            </article>
+            <article class="rr-card">
+              <h3>Keep the decision human</h3>
+              <p>The interface identifies promising records but does not claim to evaluate temperament, health, drive, or field performance.</p>
+            </article>
+          </div>
+        </section>
+        <section class="rr-static-section">
+          <h2>Architecture</h2>
+          <p>The final static demo separates authored HTML pages, page controllers, reusable layout/UI components, shared data, shared business logic, recovered runtime dependencies, and page-specific CSS by responsibility.</p>
+          <div class="rr-static-actions"><a class="rr-static-button" href="articles.html">Read the Articles</a> <a class="rr-static-button secondary" href="documentation.html">Technical Documentation</a></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

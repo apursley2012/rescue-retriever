@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Displays the complete development process article on its own page; |
+  | includes its research sections, metadata, and article navigation.          |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.        |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="rr-route" content="/articles/development-process" />
+    <meta name="author" content="Alysha Pursley" />
+    <meta name="description" content="The original client brief called for a database-backed dashboard. The public Rescue Retriever implementation keeps the filtering and visualization workflow reviewable without exposing private database credentials." />
+    <meta name="theme-color" content="#1A2F5E" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Building Rescue Retriever: Technical Decisions and Tradeoffs" />
+    <meta property="og:description" content="The original client brief called for a database-backed dashboard. The public Rescue Retriever implementation keeps the filtering and visualization workflow reviewable without exposing private database credentials." />
+    <meta property="og:image" content="../assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Building Rescue Retriever: Technical Decisions and Tradeoffs" />
+    <meta name="twitter:description" content="The original client brief called for a database-backed dashboard. The public Rescue Retriever implementation keeps the filtering and visualization workflow reviewable without exposing private database credentials." />
+    <title>Building Rescue Retriever: Technical Decisions and Tradeoffs | Rescue Retriever</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../assets/main.css" />
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="../styles/pages/article-detail.css" />
+    <script type="module" src="../runtime/page-entry.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="root" class="rr-static-fallback">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Technical · November 12, 2026 · 6 min read</span>
+          <h1>Building Rescue Retriever: Technical Decisions and Tradeoffs</h1>
+          <p>How the client workflow was preserved in a browser-friendly public implementation</p>
+          <p><a href="articles.html">Back to all articles</a></p>
+        </section>
+        <article class="rr-card rr-standalone-article">
+          <p class="rr-article-summary">The original client brief called for a database-backed dashboard. The public Rescue Retriever implementation keeps the filtering and visualization workflow reviewable without exposing private database credentials.</p>
+          <h2>The challenge was not simply displaying a table</h2>
+          <p>Rescue Retriever began with a familiar software-development problem: take a working set of requirements, turn it into something people can actually use, and make the output trustworthy enough that someone understands what it means. The source material involved Austin-area shelter records and three client-specified rescue-training profiles. The intended user needed to explore those records without memorizing query syntax or manually checking each dog against a long list of conditions.</p>
+          <p>I approached the assignment as both a data problem and a user-experience problem. The interface needed filtering, candidate details, summary visualizations, geographic context, and a path for exporting records. But a usable dashboard also needs consistency. If the table reports one set of matches and a chart reports another, no amount of visual polish can fix the underlying confusion.</p>
+          <h2>From the original dashboard to a public demonstration</h2>
+          <p>The original coursework involved a Python-based dashboard and a database-oriented workflow. For my public Rescue Retriever portfolio version, I built a browser-accessible demonstration that can run on GitHub Pages without exposing database credentials or requiring visitors to set up a private server.</p>
+          <p>That changes the architecture in an important way. The current demo uses a prepared, static shelter-data extract. Filtering, sorting, pagination, summaries, shortlist behavior, and CSV generation operate in the browser. It is designed to demonstrate the functionality and the reasoning behind it, not to impersonate a production shelter-management system.</p>
+          <p>I consider that an appropriate tradeoff for a public portfolio. A reviewer can open the site and explore the interface without signing in. At the same time, the README and the app need to make clear that its stored records are not synchronized with an active shelter database.</p>
+          <h2>Centralizing the rules instead of scattering them</h2>
+          <p>The three rescue profiles use specified combinations of breed, recorded sex, and age range. In the updated application, I keep the profile definitions in <code>data/rescueProfiles.js</code> and the comparison utilities in <code>lib/filterUtils.js</code>. The goal is to have one source of truth that the candidate cards, lists, charts, and exports can all refer to.</p>
+          <p>This separation also helps with maintenance. A change to a profile should be handled as a reviewed rules change, not as four unrelated edits to different visual components. Automated tests can then check exact breed wording, boundary ages, missing data, and cases where one dog qualifies for multiple programs.</p>
+          <p>There is a human reason for this technical design: the person reading a candidate profile deserves a consistent answer to the question, “Why did this dog match?”</p>
+          <h2>Why explainability matters more than a mysterious score</h2>
+          <p>The project&#x27;s strict filter found 24 distinct qualifying dogs in the supplied records, with 26 matches across the three categories because two dogs match more than one profile. This is a reproducible result of the configured rules. It is not a prediction that 24 animals would succeed in training.</p>
+          <p>That distinction is supported by how professional rescue organizations actually recruit dogs. The National Disaster Search Dog Foundation describes characteristics such as motivation, confidence, sociability, and energy, followed by extensive evaluation and training. The ASPCA similarly emphasizes that behavior should be understood using multiple observations and sources. These are important reminders that static animal attributes should not be mistaken for validated behavioral assessments.</p>
+          <p>I kept those limits visible in the product rather than trying to make the interface sound more sophisticated than the data warrants.</p>
+          <h2>Building a dashboard people can navigate</h2>
+          <p>The public application brings several jobs together. The Dashboard supports searching, sorting, filtering, and selecting a record. Candidate detail views reveal the matching criteria. Analytics presents dog-only breakdowns, while exports let a reviewer take the currently filtered information into another workflow.</p>
+          <p>I also gave navigation and documentation their own attention. Someone opening a portfolio demonstration should be able to understand what the product does, find the case study, read individual articles, and return to the main application without getting stranded on a page. Responsive layouts, consistent navigation, and descriptive links are part of the product, not decorative extras.</p>
+          <p>For geographic context, I kept the map tied to a selected record. The source coordinate can help orient a reviewer, but I deliberately avoid representing it as a live dog location or a verified geographic pattern.</p>
+          <h2>Quality checks and the limits of testing</h2>
+          <p>I use automated checks to protect the rescue matching rules and catch regressions in page routing and static assets. They are especially useful when a small change to shared UI code could affect multiple pages. Formatting and source-file documentation also matter because this repository is something another developer may inspect, not just something a browser runs.</p>
+          <p>Still, automated test success does not prove the interface has been visually reviewed on every device. Browser testing, accessibility review, real-user feedback, and validation against production data remain separate activities. I prefer to describe those limits accurately rather than label a demo “fully validated” simply because its unit tests pass.</p>
+          <h2>What I would change for a production deployment</h2>
+          <p>A production system would need more than a public static dataset. I would use an authenticated service for managed data access, enforce authorization on the server, add careful handling of updates and duplicate records, and design processes for logging and reviewing changes to qualification criteria. The interface would need clear record provenance and a way to indicate data freshness.</p>
+          <p>For candidate decisions, I would also add a documented review process that captures verified contact with the shelter, qualified trainer observations, and follow-up outcomes. Research on shelter breed identification shows why raw labels should not silently become biological conclusions; behavioral guidance shows why a single observation should not become a final judgment.</p>
+          <p>Those additions would create a more complete workflow, but they are future possibilities, not features I claim the current GitHub Pages demo already provides.</p>
+          <h2>The lesson I am taking forward</h2>
+          <p>The most useful improvement I made was not an individual chart or animation. It was the effort to make different parts of the experience agree: consistent rules, traceable matches, appropriate visualizations, and documentation that tells visitors what the application does and does not do.</p>
+          <p>Rescue Retriever demonstrates how I approach software development when data has real-world consequences. I want the application to be approachable, but I also want its assumptions to remain visible. That combination matters long after the first version is finished.</p>
+          <h2>Research and further reading</h2>
+          <ul>
+            <li><a href="https://searchdogfoundation.org/canine-recruitment/" target="_blank" rel="noopener noreferrer">National Disaster Search Dog Foundation: Canine Recruitment</a></li>
+            <li><a href="https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-shelter-dog-behavior-assessments" target="_blank" rel="noopener noreferrer">ASPCA: Shelter Dog Behavior Assessments</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6107223/" target="_blank" rel="noopener noreferrer">Gunter, Barber &amp; Wynne (2018): Shelter Dog Breed Identification Study</a></li>
+            <li><a href="https://data.austintexas.gov/d/9t4d-g238" target="_blank" rel="noopener noreferrer">City of Austin: Historical Animal Center Outcomes Dataset</a></li>
+          </ul>
+        </article>
+        <nav class="rr-article-more" aria-label="More Rescue Retriever articles">
+          <h2>More articles</h2>
+          <ul>
+              <li><a href="shelter-to-service.html">From Shelter to Service: The Case for Canine Rescue Candidate Identification</a></li>
+              <li><a href="breed-data-limitations.html">Breed Classification in Shelter Data: Sources of Error and Practical Mitigation</a></li>
+              <li><a href="geographic-patterns.html">Geographic Patterns in Shelter Intake and Rescue Candidate Distribution</a></li>
+          </ul>
+          <p><a href="articles.html">All articles</a></p>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Loads the project documentation view directly, including readable |
+  | guidance when client-side scripts are unavailable.                         |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/docs" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Review Rescue Retriever usage guidance, rescue-profile criteria, dashboard behavior, report features, and details about the static browser demonstration." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Retriever Documentation | User &amp; Technical Guide" property="og:title" />
+    <meta content="Review Rescue Retriever usage guidance, rescue-profile criteria, dashboard behavior, report features, and details about the static browser demonstration." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Retriever Documentation | User &amp; Technical Guide" name="twitter:title" />
+    <meta content="Review Rescue Retriever usage guidance, rescue-profile criteria, dashboard behavior, report features, and details about the static browser demonstration." name="twitter:description" />
+    <title>Rescue Retriever Documentation | User &amp; Technical Guide</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/articles.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a aria-current="page" href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Technical reference</span>
+          <h1>Documentation</h1>
+          <p>How to use the static Rescue Retriever demo, how matching works, and where the shared project responsibilities live.</p>
+        </section>
+        <section class="rr-static-section rr-docs-layout">
+          <h2>Quick links</h2>
+          <div class="rr-card rr-docs-links">
+            <ul>
+              <li><a href="#matching">Matching criteria</a></li>
+              <li><a href="#dashboard">Dashboard workflow</a></li>
+              <li><a href="#data">Data and attribution</a></li>
+              <li><a href="#architecture">Project architecture</a></li>
+            </ul>
+          </div>
+          <article class="rr-card" id="matching">
+            <h3>Matching criteria</h3>
+            <p>Strict rescue qualification compares normalized breed, recorded sex, and raw age-in-weeks against the selected program profile.</p>
+          </article>
+          <article class="rr-card" id="dashboard">
+            <h3>Dashboard workflow</h3>
+            <p>Search, filter, sort, paginate, inspect candidates, shortlist records, review charts/geography, and export CSV output.</p>
+          </article>
+          <article class="rr-card" id="data">
+            <h3>Data and attribution</h3>
+            <p>The static browser demo uses a bundled Austin Animal Center dataset snapshot. Third-party data and runtime notices are retained separately from project-owned source.</p>
+          </article>
+          <article class="rr-card" id="architecture">
+            <h3>Project architecture</h3>
+            <p>HTML pages live in <code> pages/ </code> ; page controllers in <code> js/pages/ </code> ; shared components in <code> js/components/ </code> ; shared data in <code> js/data/ </code> ; business rules in <code> js/lib/ </code> ; runtime bootstrap in <code> js/runtime/ </code> ; CSS is split into base, shared component, page-specific, and recovered runtime layers.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Provides a direct candidate-profile URL with meaningful fallback  |
+  | content before the interactive view mounts.                                |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/candidates/:id" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Review an individual Austin Animal Center shelter dog profile, rescue-program qualification details, and matching information in Rescue Retriever for review." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Candidate Details | Rescue Retriever Record Review" property="og:title" />
+    <meta content="Review an individual Austin Animal Center shelter dog profile, rescue-program qualification details, and matching information in Rescue Retriever for review." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Candidate Details | Rescue Retriever Record Review" name="twitter:title" />
+    <meta content="Review an individual Austin Animal Center shelter dog profile, rescue-program qualification details, and matching information in Rescue Retriever for review." name="twitter:description" />
+    <title>Rescue Candidate Details | Rescue Retriever Record Review</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Candidate</span>
+          <h1>Candidate Details</h1>
+          <p>The animal selected by the <code> id </code> query parameter is rendered here by the page controller.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Animal information</h2>
+          <dl class="rr-card rr-candidate-facts">
+            <div>
+              <dt>Animal ID</dt>
+              <dd>Selected from the query parameter</dd>
+            </div>
+            <div>
+              <dt>Name</dt>
+              <dd>Loaded from the bundled shelter record</dd>
+            </div>
+            <div>
+              <dt>Breed</dt>
+              <dd>Original shelter value retained</dd>
+            </div>
+            <div>
+              <dt>Sex</dt>
+              <dd>Original shelter value retained</dd>
+            </div>
+            <div>
+              <dt>Age</dt>
+              <dd>Compared using raw weeks</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Austin-area shelter record</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="rr-static-section">
+          <h2>Rescue program suitability</h2>
+          <p>The interactive detail view explains which program criteria matched and keeps the underlying record visible so a person can review the result.</p>
+          <a class="rr-static-button" href="rescue-profiles.html">View Rescue Profiles</a>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

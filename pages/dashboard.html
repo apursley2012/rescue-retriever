@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Provides a direct screening-dashboard entry with fallback         |
+  | guidance for browsing and filtering rescue candidates.                     |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/dashboard" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Search, filter, sort, review, and export Austin Animal Center dog records against defined rescue-training qualification criteria and map the selected dog." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Candidate Dashboard | Rescue Retriever Screening" property="og:title" />
+    <meta content="Search and filter shelter dogs by rescue-training criteria, review candidate details, and show one selected dog on the map." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Candidate Dashboard | Rescue Retriever Screening" name="twitter:title" />
+    <meta content="Search and filter shelter dogs by rescue-training criteria, review candidate details, and show one selected dog on the map." name="twitter:description" />
+    <title>Rescue Candidate Dashboard | Rescue Retriever Screening</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/dashboard.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a aria-current="page" href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Candidate screening</span>
+          <h1>Rescue Candidate Dashboard</h1>
+          <p>Search and compare Austin Animal Center dog records against the three client-defined rescue profiles.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Interactive candidate screening</h2>
+          <p>Enable JavaScript to search, filter, sort, shortlist, and select an individual dog on the map. The snapshot below is available without JavaScript and does not respond to filters.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Strict candidate snapshot</h2>
+          <div class="rr-card-grid rr-dashboard-summary">
+            <article class="rr-card rr-stat"><strong>17</strong> <span>Water</span></article>
+            <article class="rr-card rr-stat"><strong>5</strong> <span>Mountain/Wilderness</span></article>
+            <article class="rr-card rr-stat"><strong>4</strong> <span>Disaster/Tracking</span></article>
+            <article class="rr-card rr-stat"><strong>24</strong> <span>Unique candidates</span></article>
+          </div>
+          <div class="rr-table-wrap">
+            <table class="rr-static-table rr-dashboard-table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Animal ID</th>
+                  <th scope="col">Breed</th>
+                  <th scope="col">Sex</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Program</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="candidate-detail.html?id=4846">Penny</a></td>
+                  <td>A739549</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>6 months</td>
+                  <td>Water Rescue</td>
+                </tr>
+                <tr>
+                  <td><a href="candidate-detail.html?id=8628">*Jenny</a></td>
+                  <td>A726670</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>6 months</td>
+                  <td>Water Rescue</td>
+                </tr>
+                <tr>
+                  <td><a href="candidate-detail.html?id=36">Unnamed</a></td>
+                  <td>A706953</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>7 months</td>
+                  <td>Water Rescue</td>
+                </tr>
+                <tr>
+                  <td><a href="candidate-detail.html?id=1757">Marley</a></td>
+                  <td>A742767</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>8 months</td>
+                  <td>Water Rescue</td>
+                </tr>
+                <tr>
+                  <td><a href="candidate-detail.html?id=1628">Mika</a></td>
+                  <td>A740471</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>9 months</td>
+                  <td>Water Rescue</td>
+                </tr>
+                <tr>
+                  <td><a href="candidate-detail.html?id=6237">Ella</a></td>
+                  <td>A747734</td>
+                  <td>Labrador Retriever Mix</td>
+                  <td>Intact Female</td>
+                  <td>1 year</td>
+                  <td>Water Rescue</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <p class="rr-static-footer-note">The interactive JavaScript dashboard provides search, sorting, pagination, shortlist state, the one-selected-dog map, and CSV exports. Charts and statistical comparisons are available on the Analytics page.</p>
+      </main>
+    </div>
+  </body>
+</html>

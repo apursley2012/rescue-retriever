@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Provides the direct-load Articles page with readable fallback     |
+  | content and scripts to mount the interactive index.                        |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/articles" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Read Rescue Retriever articles covering rescue-candidate matching, shelter-data analysis, interface decisions, and development choices behind the project." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Retriever Articles | Research &amp; Development" property="og:title" />
+    <meta content="Read Rescue Retriever articles covering rescue-candidate matching, shelter-data analysis, interface decisions, and development choices behind the project." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Retriever Articles | Research &amp; Development" name="twitter:title" />
+    <meta content="Read Rescue Retriever articles covering rescue-candidate matching, shelter-data analysis, interface decisions, and development choices behind the project." name="twitter:description" />
+    <title>Rescue Retriever Articles | Research &amp; Development</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <link href="../styles/pages/articles.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a aria-current="page" href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Research &amp; writing</span>
+          <h1>Articles</h1>
+          <p>Project research, data-quality context, analysis, and technical decisions behind Rescue Retriever.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Published articles</h2>
+          <div class="rr-card-grid">
+            <article class="rr-card rr-article-card">
+              <p class="rr-static-kicker">Research</p>
+              <h3><a href="shelter-to-service.html">From Shelter to Service: The Case for Canine Rescue Candidate Identification</a></h3>
+              <p>How structured screening can help rescue organizations find promising shelter dogs.</p>
+            </article>
+            <article class="rr-card rr-article-card">
+              <p class="rr-static-kicker">Technical</p>
+              <h3><a href="breed-data-limitations.html">Breed Classification in Shelter Data: Sources of Error and Practical Mitigation</a></h3>
+              <p>Why breed labels need normalization and human review before they are treated as a final decision.</p>
+            </article>
+            <article class="rr-card rr-article-card">
+              <p class="rr-static-kicker">Analysis</p>
+              <h3><a href="geographic-patterns.html">Geographic Patterns in Shelter Intake and Rescue Candidate Distribution</a></h3>
+              <p>Using location fields to add geographic context to rescue-candidate review.</p>
+            </article>
+            <article class="rr-card rr-article-card">
+              <p class="rr-static-kicker">Technical</p>
+              <h3><a href="development-process.html">Building Rescue Retriever: Technical Decisions and Tradeoffs</a></h3>
+              <p>How the client workflow was preserved in a browser-friendly public implementation.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

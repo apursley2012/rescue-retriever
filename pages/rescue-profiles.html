@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Loads the rescue-profile criteria page directly, with fallback    |
+  | explanations of the supported rescue categories.                           |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="/profiles" name="rr-route" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="Review the breed, sex, and age criteria used to identify potential candidates for water, mountain, wilderness, disaster, and tracking rescue programs." name="description" />
+    <meta content="#1A2F5E" name="theme-color" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" http-equiv="Content-Security-Policy" />
+    <link href="../favicon.ico" rel="icon" sizes="any" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <meta content="website" property="og:type" />
+    <meta content="Rescue Training Profiles | Rescue Retriever Criteria" property="og:title" />
+    <meta content="Review the breed, sex, and age criteria used to identify potential candidates for water, mountain, wilderness, disaster, and tracking rescue programs." property="og:description" />
+    <meta content="../assets/logo.png" property="og:image" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Rescue Training Profiles | Rescue Retriever Criteria" name="twitter:title" />
+    <meta content="Review the breed, sex, and age criteria used to identify potential candidates for water, mountain, wilderness, disaster, and tracking rescue programs." name="twitter:description" />
+    <title>Rescue Training Profiles | Rescue Retriever Criteria</title>
+    <link href="../assets/main.css" rel="stylesheet" />
+    <link href="../styles/shared.css" rel="stylesheet" />
+    <script src="../runtime/page-entry.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation" class="rr-noscript-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="analytics.html">Analytics</a></li>
+          <li><a aria-current="page" href="rescue-profiles.html">Rescue Profiles</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <div class="rr-static-fallback" id="root">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Rescue Retriever programs</span>
+          <h1>Rescue Profiles</h1>
+          <p>Transparent screening criteria for Water Rescue, Mountain or Wilderness Rescue, and Disaster Rescue or Individual Tracking.</p>
+        </section>
+        <section class="rr-static-section">
+          <h2>Screening criteria</h2>
+          <p>These criteria narrow records for human review. They do not replace health, temperament, drive, or field evaluation.</p>
+          <div class="rr-card-grid">
+            <article class="rr-card rr-profile-card" data-program="water">
+              <h3>Water Rescue</h3>
+              <p>17 current strict candidates.</p>
+              <ul class="rr-criteria">
+                <li>Breeds: Labrador Retriever Mix, Chesapeake Bay Retriever, Newfoundland</li>
+                <li>Sex: Intact Female</li>
+                <li>Age: 26–156 weeks</li>
+              </ul>
+            </article>
+            <article class="rr-card rr-profile-card" data-program="mountain">
+              <h3>Mountain or Wilderness Rescue</h3>
+              <p>5 current strict candidates.</p>
+              <ul class="rr-criteria">
+                <li>Breeds include German Shepherd, Alaskan Malamute, Old English Sheepdog, Siberian Husky, and Rottweiler</li>
+                <li>Sex: Intact Male</li>
+                <li>Age: 26–156 weeks</li>
+              </ul>
+            </article>
+            <article class="rr-card rr-profile-card" data-program="disaster">
+              <h3>Disaster Rescue or Individual Tracking</h3>
+              <p>4 current strict candidates.</p>
+              <ul class="rr-criteria">
+                <li>Breeds include Doberman Pinscher, German Shepherd, Golden Retriever, Bloodhound, and Rottweiler</li>
+                <li>Sex: Intact Male</li>
+                <li>Age: 20–300 weeks</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        <section class="rr-static-section">
+          <h2>How matching works</h2>
+          <div class="rr-callout">The matcher compares each shelter record's normalized breed, recorded sex, and raw age-in-weeks against the selected profile. The original shelter values remain available for review.</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

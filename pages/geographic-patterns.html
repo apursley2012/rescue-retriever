@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Displays the complete geographic patterns article on its own page; |
+  | includes its research sections, metadata, and article navigation.          |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.        |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="rr-route" content="/articles/geographic-patterns" />
+    <meta name="author" content="Alysha Pursley" />
+    <meta name="description" content="Latitude, longitude, and shelter-area location fields give reviewers another way to understand the records after rescue criteria are applied, without claiming patterns the dataset has not been formally tested to prove." />
+    <meta name="theme-color" content="#1A2F5E" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Geographic Patterns in Shelter Intake and Rescue Candidate Distribution" />
+    <meta property="og:description" content="Latitude, longitude, and shelter-area location fields give reviewers another way to understand the records after rescue criteria are applied, without claiming patterns the dataset has not been formally tested to prove." />
+    <meta property="og:image" content="../assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Geographic Patterns in Shelter Intake and Rescue Candidate Distribution" />
+    <meta name="twitter:description" content="Latitude, longitude, and shelter-area location fields give reviewers another way to understand the records after rescue criteria are applied, without claiming patterns the dataset has not been formally tested to prove." />
+    <title>Geographic Patterns in Shelter Intake and Rescue Candidate Distribution | Rescue Retriever</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../assets/main.css" />
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="../styles/pages/article-detail.css" />
+    <script type="module" src="../runtime/page-entry.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="root" class="rr-static-fallback">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Analysis · November 12, 2026 · 5 min read</span>
+          <h1>Geographic Patterns in Shelter Intake and Rescue Candidate Distribution</h1>
+          <p>Using location fields to add geographic context to rescue-candidate review</p>
+          <p><a href="articles.html">Back to all articles</a></p>
+        </section>
+        <article class="rr-card rr-standalone-article">
+          <p class="rr-article-summary">Latitude, longitude, and shelter-area location fields give reviewers another way to understand the records after rescue criteria are applied, without claiming patterns the dataset has not been formally tested to prove.</p>
+          <h2>Maps tell a story, but first we have to know whose story it is</h2>
+          <p>A map can make a dataset feel immediately understandable. Rows of coordinates become points on familiar streets, and a reader starts seeing clusters, distances, and patterns. That visual clarity is useful, but it can also encourage conclusions that the source data does not support.</p>
+          <p>When I added geographic context to Rescue Retriever, I wanted the map to answer a modest, practical question: <strong>Where does the selected record&#x27;s stored coordinate place it?</strong> I did not want it to suggest that the application knows a dog&#x27;s current location, where a rescue event happened, or where search-and-rescue candidates are most likely to be found.</p>
+          <p>The distinction matters because every map inherits the strengths and weaknesses of the data behind it.</p>
+          <h2>Understanding the underlying records</h2>
+          <p>Rescue Retriever uses a fixed extract of Austin-area shelter records supplied for the project. Its selected-record map reads coordinate values from that extract. The application does not perform real-time shelter lookups, location tracking, or independent verification of the coordinates.</p>
+          <p>The City of Austin publishes animal-center datasets, but the current public data system should not be confused with the project&#x27;s historical extract. Austin&#x27;s outcome data spanning 2013 through May 5, 2025 is now identified as a historical dataset, and the city publishes a separate outcomes dataset for records from May 5, 2025 onward. The city&#x27;s own public dashboard also warns that its figures are not real time.</p>
+          <p>That history is worth mentioning because a portfolio demo can look current even when its underlying records are frozen. A static map should be labeled for what it is: an illustration based on stored data, not an availability service.</p>
+          <h2>What a coordinate does not prove</h2>
+          <p>A latitude-and-longitude pair is not automatically a verified point of origin. Without confirming how the value was collected, it would be risky to interpret it as an intake location, a residence, an animal&#x27;s present kennel, or the site of a rescue need. Even valid coordinates can be rounded, generalized, outdated, or attached to an administrative record instead of a physical event.</p>
+          <p>That is why Rescue Retriever shows one selected dog at a time rather than drawing a dramatic map of “candidate hotspots.” A map with hundreds of dots might imply a spatial analysis that the project has not performed. It could also encourage viewers to mistake concentrations in the dataset for actual concentrations of suitable rescue dogs.</p>
+          <p>If a user needs geographic evidence for operational planning, the correct next step is to verify the source, definition, precision, and timeliness of those location fields before running any spatial analysis.</p>
+          <h2>How the map fits into the screening workflow</h2>
+          <p>The Dashboard begins with the dog&#x27;s profile, not the map. A user filters the data, sorts or searches the table, and selects a record. The map then displays the selected record&#x27;s stored coordinates where possible. This keeps location tied to a specific entry and gives the reviewer a clear route back to the underlying information.</p>
+          <p>The Analytics page serves a different purpose. It summarizes dog-only comparisons such as breed, recorded sex, age groups, and rescue-program qualification. Those charts explain the composition of the selected dataset; they do not establish whether one neighborhood has a higher probability of producing working dogs.</p>
+          <p>Keeping those two tasks separate helps avoid an easy analytical mistake: combining a descriptive chart with a map and presenting the result as if it demonstrated a causal relationship.</p>
+          <h2>The questions worth asking before drawing a conclusion</h2>
+          <p>If I were extending the project into a genuine spatial study, I would first examine whether each coordinate represents a shelter facility, an intake address, a found location, or something else. I would check how many records have missing or duplicate coordinates, whether multiple rows describe the same animal, and whether records cover comparable time periods.</p>
+          <p>I would also ask what denominator is appropriate. Ten candidate records in one area mean very little without knowing how many total dogs were recorded there, what kinds of animals entered the system, and whether collection practices differed across locations. A meaningful geographic rate requires a clearly defined population, not just a cluster of markers.</p>
+          <p>Finally, I would separate historical patterns from current decisions. The Austin datasets and reporting systems have evolved, and a historical snapshot is not an operational substitute for contacting a shelter or verifying an individual animal&#x27;s status.</p>
+          <h2>A careful visualization is still useful</h2>
+          <p>None of these limitations mean the coordinates should be ignored. Location can help a reviewer orient themselves to a particular record and flag information worth checking. The benefit comes from treating the visualization as context instead of proof.</p>
+          <p>For Rescue Retriever, that is the boundary I want the interface to respect. The candidate criteria answer why a record qualifies under the project&#x27;s rules. The map illustrates a stored geographic value. Human follow-up is still needed to establish what that value means and whether the animal is available for evaluation.</p>
+          <p>Good data storytelling sometimes means declining to tell a more dramatic story than the evidence supports.</p>
+          <h2>Research and further reading</h2>
+          <ul>
+            <li><a href="https://data.austintexas.gov/d/9t4d-g238" target="_blank" rel="noopener noreferrer">City of Austin: Historical Animal Center Outcomes, 2013–2025</a></li>
+            <li><a href="https://data.austintexas.gov/d/pyqf-r2dc" target="_blank" rel="noopener noreferrer">City of Austin: Current Animal Center Intakes</a></li>
+            <li><a href="https://www.austintexas.gov/animal-services/austin-animal-center-dashboard" target="_blank" rel="noopener noreferrer">City of Austin: Animal Center Public Dashboard</a></li>
+            <li><a href="https://catalog.data.gov/dataset/austin-animal-center-outcomes" target="_blank" rel="noopener noreferrer">Data.gov: Animal Center Outcomes Data Catalog</a></li>
+          </ul>
+        </article>
+        <nav class="rr-article-more" aria-label="More Rescue Retriever articles">
+          <h2>More articles</h2>
+          <ul>
+              <li><a href="shelter-to-service.html">From Shelter to Service: The Case for Canine Rescue Candidate Identification</a></li>
+              <li><a href="breed-data-limitations.html">Breed Classification in Shelter Data: Sources of Error and Practical Mitigation</a></li>
+              <li><a href="development-process.html">Building Rescue Retriever: Technical Decisions and Tradeoffs</a></li>
+          </ul>
+          <p><a href="articles.html">All articles</a></p>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>

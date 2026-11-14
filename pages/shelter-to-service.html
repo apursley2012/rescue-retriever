@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Displays the complete shelter to service article on its own page; |
+  | includes its research sections, metadata, and article navigation.          |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.        |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="rr-route" content="/articles/shelter-to-service" />
+    <meta name="author" content="Alysha Pursley" />
+    <meta name="description" content="Shelter records already contain several of the fields needed for an initial search-and-rescue candidate screen. The harder part is turning those records into a repeatable review process." />
+    <meta name="theme-color" content="#1A2F5E" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="From Shelter to Service: The Case for Canine Rescue Candidate Identification" />
+    <meta property="og:description" content="Shelter records already contain several of the fields needed for an initial search-and-rescue candidate screen. The harder part is turning those records into a repeatable review process." />
+    <meta property="og:image" content="../assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From Shelter to Service: The Case for Canine Rescue Candidate Identification" />
+    <meta name="twitter:description" content="Shelter records already contain several of the fields needed for an initial search-and-rescue candidate screen. The harder part is turning those records into a repeatable review process." />
+    <title>From Shelter to Service: The Case for Canine Rescue Candidate Identification | Rescue Retriever</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../assets/main.css" />
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="../styles/pages/article-detail.css" />
+    <script type="module" src="../runtime/page-entry.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="root" class="rr-static-fallback">
+      <main class="rr-static-page" id="main-content" tabindex="-1">
+        <section class="rr-static-hero">
+          <span class="rr-static-kicker">Research · November 12, 2026 · 5 min read</span>
+          <h1>From Shelter to Service: The Case for Canine Rescue Candidate Identification</h1>
+          <p>How structured screening can help rescue organizations find promising shelter dogs</p>
+          <p><a href="articles.html">Back to all articles</a></p>
+        </section>
+        <article class="rr-card rr-standalone-article">
+          <p class="rr-article-summary">Shelter records already contain several of the fields needed for an initial search-and-rescue candidate screen. The harder part is turning those records into a repeatable review process.</p>
+          <h2>A promising dog is not always an obvious candidate</h2>
+          <p>A busy shelter can be full of dogs with very different backgrounds, personalities, and abilities. Some are waiting for a family. Others might also have characteristics worth exploring for specialized work. The challenge is that a conventional shelter record was never designed to answer a question such as, “Which dogs should a search-and-rescue trainer meet first?”</p>
+          <p>That is the question behind Rescue Retriever. I built the project to take existing shelter records and turn them into a more practical starting point for candidate identification. It does not select working dogs. It helps a person find records that deserve a closer look, and it explains why those records appeared in the results.</p>
+          <p>This is more than a technical distinction. A promising database match is still a real animal with a history that might not be reflected in a spreadsheet. Responsible screening has to leave room for what the data cannot tell us.</p>
+          <h2>Why shelters are worth considering</h2>
+          <p>The National Disaster Search Dog Foundation (SDF) recruits dogs from shelters and rescue groups for training. Its published recruitment criteria include confidence, high energy, toy drive, sociability, and comfort in unfamiliar environments. SDF&#x27;s program is evidence that a shelter pathway into rescue work exists, but its evaluation is far more involved than selecting a breed from a list.</p>
+          <p>SDF also describes a lengthy process involving training, pairing a dog with a handler, and pursuing certification. I think that context is essential when discussing any software designed to identify potential rescue candidates. Rescue Retriever operates at the *beginning* of that journey, not at the point where an animal is declared suitable for deployment.</p>
+          <p>The aim is to organize an initial search without pretending to perform a professional evaluation. With many records to review and only limited staff time, consistency and transparency can be meaningful improvements.</p>
+          <h2>From a shelter record to a reviewable shortlist</h2>
+          <p>The supplied Rescue Retriever extract contains 10,000 records, including 5,589 records classified as dogs. These are project-supplied, historical records, not a live inventory of animals available today. The application uses recorded characteristics such as breed, sex, and age to compare each dog with three specified training profiles: Water Rescue, Mountain or Wilderness Rescue, and Disaster Rescue or Individual Tracking.</p>
+          <p>I kept those criteria explicit rather than burying them inside an opaque recommendation system. A reviewer can examine the breed, sex, and age checks and understand why an animal was included or excluded. An unfamiliar score might look impressive on a dashboard, but it is less useful when nobody can explain what went into it.</p>
+          <p>The workflow is straightforward: choose a program, narrow the records, inspect candidate details, compare summary information, and export the selected results for further investigation. The interface also provides a record-specific map for the source coordinates where they are available. It does not claim to locate a dog in real time.</p>
+          <h2>What the screening numbers actually show</h2>
+          <p>Applying the project&#x27;s strict rules yields 24 distinct dogs that match at least one profile. The program lists contain 17 Water Rescue matches, five Mountain or Wilderness matches, and four Disaster or Tracking matches. Those three counts add to 26 because two dogs qualify for more than one program.</p>
+          <p>It is easy to lose that distinction in a polished chart. <strong>Twenty-four dogs</strong> is the number of unique candidate records; <strong>26 program matches</strong> is the number of qualifying assignments across all profiles. Neither figure measures successful training outcomes, nor does it describe dogs currently available for placement.</p>
+          <p>A shortlist should therefore be interpreted as a set of leads. It can tell a trainer where to begin reviewing. It cannot establish physical fitness, persistence under distraction, confidence on unstable surfaces, medical suitability, or a dog&#x27;s willingness to work with a handler.</p>
+          <h2>The missing information is often the most important</h2>
+          <p>SDF emphasizes qualities such as play motivation, confidence, and sociability in its recruitment process. These are not the same as a breed label or a numerical age. A dog can meet every database condition and still be unsuitable for a demanding training program. Another dog could fail a rigid breed filter but display exceptional qualities during an in-person assessment.</p>
+          <p>The ASPCA also cautions against treating any single shelter behavior observation or assessment as a complete predictor of an animal&#x27;s future behavior. Context, stress, and different sources of information matter. Although the ASPCA&#x27;s guidance is primarily about shelter assessment and placement, its larger lesson applies here: meaningful decisions should use multiple kinds of evidence.</p>
+          <p>For that reason, I would treat a Rescue Retriever result as the first step in a review sequence: confirm the record, contact the shelter, assess the dog&#x27;s health and behavior, involve qualified trainers, and document the outcome. The software should make that handoff easier, not skip it.</p>
+          <h2>What good screening software should promise</h2>
+          <p>A useful tool does not need to claim that it can identify the next great rescue dog. Its value can be simpler and more defensible: consistent filters, visible criteria, reproducible counts, and a clear way to move from data to human follow-up.</p>
+          <p>I designed Rescue Retriever around that principle. It narrows the search while leaving the final judgment where it belongs, with people who can meet the dog, observe its behavior, and evaluate the requirements of the actual training program.</p>
+          <h2>Research and further reading</h2>
+          <ul>
+            <li><a href="https://searchdogfoundation.org/canine-recruitment/" target="_blank" rel="noopener noreferrer">National Disaster Search Dog Foundation: Canine Recruitment</a></li>
+            <li><a href="https://searchdogfoundation.org/canine-training-program/" target="_blank" rel="noopener noreferrer">National Disaster Search Dog Foundation: Canine Training Program</a></li>
+            <li><a href="https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-shelter-dog-behavior-assessments" target="_blank" rel="noopener noreferrer">ASPCA: Position Statement on Shelter Dog Behavior Assessments</a></li>
+            <li><a href="https://data.austintexas.gov/d/9t4d-g238" target="_blank" rel="noopener noreferrer">City of Austin: Historical Austin Animal Center Outcomes Data</a></li>
+          </ul>
+        </article>
+        <nav class="rr-article-more" aria-label="More Rescue Retriever articles">
+          <h2>More articles</h2>
+          <ul>
+              <li><a href="breed-data-limitations.html">Breed Classification in Shelter Data: Sources of Error and Practical Mitigation</a></li>
+              <li><a href="geographic-patterns.html">Geographic Patterns in Shelter Intake and Rescue Candidate Distribution</a></li>
+              <li><a href="development-process.html">Building Rescue Retriever: Technical Decisions and Tradeoffs</a></li>
+          </ul>
+          <p><a href="articles.html">All articles</a></p>
+        </nav>
+      </main>
+    </div>
+  </body>
+</html>

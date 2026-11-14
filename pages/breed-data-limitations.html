@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Rescue Retriever                                                           |
+  | Purpose: Displays the complete breed data limitations article on its own page; |
+  | includes its research sections, metadata, and article navigation.          |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  | Rights: Proprietary original contributions; see repository LICENSE.        |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="rr-route"
+			content="/articles/breed-data-limitations" />
+		<meta
+			name="author"
+			content="Alysha Pursley" />
+		<meta
+			name="description"
+			content="Shelter breed labels are operational records, not genetic proof. Rescue Retriever treats them as screening data and preserves exact client-specified breed matches." />
+		<meta
+			name="theme-color"
+			content="#1A2F5E" />
+		<meta
+			name="referrer"
+			content="strict-origin-when-cross-origin" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+		<meta
+			property="og:type"
+			content="article" />
+		<meta
+			property="og:title"
+			content="Breed Classification in Shelter Data: Sources of Error and Practical Mitigation" />
+		<meta
+			property="og:description"
+			content="Shelter breed labels are operational records, not genetic proof. Rescue Retriever treats them as screening data and preserves exact client-specified breed matches." />
+		<meta
+			property="og:image"
+			content="../assets/logo.png" />
+		<meta
+			name="twitter:card"
+			content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Breed Classification in Shelter Data: Sources of Error and Practical Mitigation" />
+		<meta
+			name="twitter:description"
+			content="Shelter breed labels are operational records, not genetic proof. Rescue Retriever treats them as screening data and preserves exact client-specified breed matches." />
+		<title>
+			Breed Classification in Shelter Data: Sources of Error and
+			Practical Mitigation | Rescue Retriever
+		</title>
+		<link
+			rel="icon"
+			href="../favicon.ico"
+			sizes="any" />
+		<link
+			rel="apple-touch-icon"
+			href="../apple-touch-icon.png"
+			sizes="180x180" />
+		<link
+			rel="manifest"
+			href="../manifest.webmanifest" />
+		<link
+			rel="stylesheet"
+			href="../assets/main.css" />
+		<link
+			rel="stylesheet"
+			href="../styles/shared.css" />
+		<link
+			rel="stylesheet"
+			href="../styles/pages/article-detail.css" />
+		<script
+			type="module"
+			src="../runtime/page-entry.js"></script>
+	</head>
+	<body>
+		<a
+			class="skip-link"
+			href="#main-content">
+			Skip to main content
+		</a>
+		<div
+			id="root"
+			class="rr-static-fallback">
+			<main
+				class="rr-static-page"
+				id="main-content"
+				tabindex="-1">
+				<section class="rr-static-hero">
+					<span class="rr-static-kicker">
+						Technical · November 12, 2026 · 5 min read
+					</span>
+					<h1>
+						Breed Classification in Shelter Data: Sources of
+						Error and Practical Mitigation
+					</h1>
+					<p>
+						Why exact breed matching requires careful
+						interpretation and human review
+					</p>
+					<p><a href="articles.html">Back to all articles</a></p>
+				</section>
+				<article class="rr-card rr-standalone-article">
+					<p class="rr-article-summary">
+						Shelter breed labels are operational records, not
+						genetic proof. Rescue Retriever treats them as
+						screening data and preserves exact
+						client-specified breed matches.
+					</p>
+					<h2>
+						A breed field looks simple until you rely on it
+					</h2>
+					<p>
+						Open a shelter spreadsheet and the breed column
+						can appear to offer a reassuringly clear answer. A
+						dog is marked as a Labrador Retriever Mix, German
+						Shepherd, or another familiar label. A filter
+						checks the text, and suddenly the software seems
+						to know which animals fit a training profile.
+					</p>
+					<p>
+						The problem is that the label may describe
+						someone&#x27;s visual assessment, not a verified
+						genetic result. A computer can match a string
+						perfectly while the real-world meaning of that
+						string remains uncertain. I wanted Rescue
+						Retriever&#x27;s screening rules to be
+						understandable without overstating what shelter
+						data can establish.
+					</p>
+					<h2>
+						What research tells us about visual breed
+						identification
+					</h2>
+					<p>
+						A 2018 study by Gunter, Barber, and Wynne compared
+						shelter staff breed labels with genetic testing in
+						919 dogs across two shelters. In the San Diego
+						shelter sample, staff identified at least one
+						breed in a dog&#x27;s genetic heritage for 67.7%
+						of tested dogs, but agreement fell to 10.4% when
+						identifying more than one breed. The researchers
+						emphasized the complexity of mixed-breed ancestry
+						and the value of describing dogs as individuals.
+					</p>
+					<p>
+						A separate 2015 study examining pit bull-type
+						labels found substantial variation between visual
+						identification and DNA results. These studies do
+						not mean shelter staff are careless. They show how
+						difficult it is to infer ancestry from appearance,
+						especially when multiple breeds may contribute to
+						a dog&#x27;s features.
+					</p>
+					<p>
+						That matters because automated sorting can make
+						uncertain input look authoritative. A precise
+						filter result does not automatically make the
+						source classification precise.
+					</p>
+					<h2>Why I kept the matching rules strict</h2>
+					<p>
+						Rescue Retriever uses client-defined breed lists
+						for three rescue profiles. In the original
+						screening approach, an animal matches a breed
+						criterion only when its recorded value belongs to
+						that specified list. My implementation preserves
+						this exact-match behavior while trimming
+						surrounding whitespace. It does not silently treat
+						“Mix” and “Mixed” as interchangeable or infer
+						synonyms from similar-looking strings.
+					</p>
+					<p>
+						This may sound conservative, but there is a
+						reason. If I broadened matching without
+						documenting the change, the number of selected
+						candidates could increase and users might assume
+						those new results met the original rules. That
+						would make the software harder to audit. A revised
+						matching policy can be valuable, but it should be
+						a deliberate, versioned choice rather than an
+						invisible convenience.
+					</p>
+					<p>
+						Strict matching has limitations too. A breed
+						recorded with a different abbreviation, spelling,
+						or convention may be missed even when the dog
+						merits an in-person look. In other words, exact
+						matching improves reproducibility, not biological
+						certainty.
+					</p>
+					<h2>
+						Normalization is not the same as rewriting history
+					</h2>
+					<p>
+						In data processing, normalization often means
+						making values easier to compare: removing stray
+						spaces, standardizing case, or mapping known
+						aliases. Those changes should not erase the
+						original value. If a reviewer sees “Labrador
+						Retriever Mix” in the source, I want that source
+						value to remain available even when a future
+						system also offers a normalized category.
+					</p>
+					<p>
+						One approach for a more advanced version would be
+						to maintain separate fields:
+						<strong>recorded breed</strong>
+						,
+						<strong>normalized comparison label</strong>
+						, and
+						<strong>match method</strong>
+						. The tool could then distinguish an exact match
+						from a reviewed alias and from an uncertain
+						suggestion. None of those additional categories
+						should be presented as verified genetic identity.
+					</p>
+					<p>
+						This also matters for fairness. Rules based on a
+						narrow breed list can exclude dogs with the right
+						working qualities, particularly mixed-breed
+						animals. SDF&#x27;s recruitment program explicitly
+						considers mixes of several working breeds and
+						evaluates traits beyond ancestry. The lesson is
+						not that all breed filters are useless. It is that
+						breed alone should not carry more weight than the
+						task justifies.
+					</p>
+					<h2>How to spot a misleading result</h2>
+					<p>
+						Suppose one dog is labeled “German Shepherd” and
+						another is labeled “German Shepherd Mix.” Under an
+						exact-match list containing only the first string,
+						the dogs receive different outcomes. The
+						difference is a consequence of the written rule,
+						not evidence that the first dog is more suitable
+						for rescue work.
+					</p>
+					<p>
+						Or consider an animal whose label is blank. A
+						careful system should identify the data as
+						missing, not guess the breed and fill a seemingly
+						complete record. Missing information should be
+						visible because it changes how confidently the
+						record can be interpreted.
+					</p>
+					<p>
+						Tests for the matching helper should cover spaces,
+						casing decisions, missing fields, age boundaries,
+						exact “Mix” wording, and dogs that qualify for
+						multiple profiles. That protects the software from
+						accidental shifts in meaning when the interface
+						changes.
+					</p>
+					<h2>Put the dog back into the decision</h2>
+					<p>
+						The ASPCA advises shelters to use multiple sources
+						of behavioral information rather than relying on a
+						single assessment. The same spirit should guide
+						working-dog candidate identification: a record can
+						suggest whom to meet, while experienced evaluators
+						determine what the animal is actually like in
+						relevant situations.
+					</p>
+					<p>
+						My priority in Rescue Retriever is therefore
+						traceability. I want a reviewer to know the
+						animal&#x27;s recorded characteristics, the
+						precise rule that produced the match, and the
+						limits of the result. The right outcome is not a
+						magically perfect list. It is a shortlist that
+						people can question, reproduce, and improve.
+					</p>
+					<h2>Research and further reading</h2>
+					<ul>
+						<li>
+							<a
+								href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6107223/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Gunter, Barber &amp; Wynne (2018): A
+								Canine Identity Crisis
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://pubmed.ncbi.nlm.nih.gov/26403955/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Olson et al. (2015): Inconsistent
+								Identification of Pit Bull-Type Dogs by
+								Shelter Staff
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://searchdogfoundation.org/canine-recruitment/"
+								target="_blank"
+								rel="noopener noreferrer">
+								National Disaster Search Dog Foundation:
+								Canine Recruitment
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-shelter-dog-behavior-assessments"
+								target="_blank"
+								rel="noopener noreferrer">
+								ASPCA: Position Statement on Shelter Dog
+								Behavior Assessments
+							</a>
+						</li>
+					</ul>
+				</article>
+				<nav
+					class="rr-article-more"
+					aria-label="More Rescue Retriever articles">
+					<h2>More articles</h2>
+					<ul>
+						<li>
+							<a href="shelter-to-service.html">
+								From Shelter to Service: The Case for
+								Canine Rescue Candidate Identification
+							</a>
+						</li>
+						<li>
+							<a href="geographic-patterns.html">
+								Geographic Patterns in Shelter Intake
+								and Rescue Candidate Distribution
+							</a>
+						</li>
+						<li>
+							<a href="development-process.html">
+								Building Rescue Retriever: Technical
+								Decisions and Tradeoffs
+							</a>
+						</li>
+					</ul>
+					<p><a href="articles.html">All articles</a></p>
+				</nav>
+			</main>
+		</div>
+	</body>
+</html>
