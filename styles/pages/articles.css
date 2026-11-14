@@ -1,0 +1,35 @@
+/*******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Styles the Articles index without changing other pages.           |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+.article-card-body {
+  background: radial-gradient(circle at 94% 8%, #2BBCD41C 0 5.5rem, #00000000 5.6rem),
+    radial-gradient(circle at 87% 18%, #F4792017 0 2.8rem, #00000000 2.9rem),
+    linear-gradient(135deg, #fff 0%, #fff 68%, #f6f9fd 100%);
+}
+
+.article-card-body::before {
+  content: "";
+  position: absolute;
+  inset: 1.4rem auto 1.4rem 0;
+  width: 4px;
+  border-radius: 0 999px 999px 0;
+  background: var(--article-accent, #F47920);
+}
+
+.article-card-index {
+  position: absolute;
+  top: .6rem;
+  right: 1.25rem;
+  color: #1A2F5E0E;
+  font-family: Syne, sans-serif;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}

@@ -1,0 +1,191 @@
+/*******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Styles the branded 404 page with responsive layouts and           |
+ * | accessible navigation.                                                     |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f8fb;
+  color: #1a2f5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid #f47920;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: #fff;
+  border-bottom: 1px solid #d8e0ee;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+}
+
+.site-brand img {
+  width: auto;
+  height: 3.25rem;
+  object-fit: contain;
+}
+
+.site-brand strong {
+  color: #b84d00;
+}
+
+.not-found {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 5rem) 1rem;
+}
+
+.not-found-card {
+  width: min(100%, 44rem);
+  padding: clamp(1.5rem, 6vw, 4rem);
+  border: 1px solid #d8e0ee;
+  border-radius: 1.5rem;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 1.25rem 4rem rgb(26 47 94 / 8%);
+}
+
+.status-code {
+  color: #f47920;
+  font-size: clamp(4.5rem, 16vw, 9rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.eyebrow {
+  margin: 1rem 0 0.5rem;
+  color: #b84d00;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.65rem, 4vw, 2.75rem);
+  line-height: 1.2;
+}
+
+.not-found-card > p:not(.eyebrow) {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: #4a5b7a;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.actions a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary-button {
+  background: #1a2f5e;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background: #0d1b38;
+}
+
+.secondary-button {
+  border: 2px solid #1a2f5e;
+  background: #fff;
+}
+
+.secondary-button:hover {
+  background: #eef2f8;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.25rem clamp(1rem, 4vw, 3rem);
+  background: #0d1b38;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+
+  .site-footer {
+    justify-content: center;
+    text-align: center;
+  }
+}

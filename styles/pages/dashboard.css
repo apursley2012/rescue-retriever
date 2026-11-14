@@ -1,0 +1,188 @@
+/*******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Styles Dashboard-only controls, the selected-dog map, and the     |
+ * | hero logo; shared rules live in shared.css.                                |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+.rr-static-form-action {
+  align-content: end;
+}
+
+.rr-static-form-spacer {
+  min-height: 1.1rem;
+}
+
+
+/* The map uses online OpenStreetMap raster tiles with local data markers. */
+.rr-location-map {
+  width: 100%;
+}
+.rr-location-map-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+  font-size: .875rem;
+  color: #344667;
+}
+.rr-location-map-toolbar button {
+  border: 1px solid #b6c8db;
+  border-radius: .6rem;
+  padding: .5rem .8rem;
+  color: #1a2f5e;
+  font-weight: 600;
+}
+.rr-location-map-toolbar button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.rr-location-map-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 720 / 420;
+  border: 1px solid #d8e0ee;
+  border-radius: 12px;
+  background: #e5edf1;
+}
+.rr-location-map-surface {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.rr-location-map-tile {
+  position: absolute;
+  width: 35.5555556%;
+  height: auto;
+  max-width: none;
+  display: block;
+}
+.rr-location-map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #f47920;
+  font-size: 16px;
+  line-height: 1;
+  text-shadow: 0 0 2px white, 0 0 5px white;
+  pointer-events: none;
+}
+.rr-location-map-pin-selected {
+  color: #087f8c;
+  font-size: 30px;
+  z-index: 3;
+  text-shadow: 0 0 2px white, 0 0 7px white;
+}
+.rr-location-map-attribution {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #ffffffdb;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: #1a2f5e;
+}
+.rr-location-map-attribution a {
+  text-decoration: underline;
+}
+.rr-coordinate-intro, .rr-coordinate-disclaimer {
+  margin-top: .7rem;
+  color: #4a5b7a;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+/* Explicit hero-logo sizing avoids relying on generated utility-class availability. */
+.rr-dashboard-hero-logo {
+  display: block;
+  width: 5rem;
+  height: 6rem;
+  max-width: 5rem;
+  max-height: 6rem;
+  flex: 0 0 5rem;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .rr-dashboard-hero-logo {
+    width: 4rem;
+    height: 4.8rem;
+    max-width: 4rem;
+    max-height: 4.8rem;
+    flex-basis: 4rem;
+  }
+}
+
+/* Selected-animal map: one pin and readable animal details, with zoom controls. */
+.rr-location-map-zoom {
+  display: flex;
+  gap: .35rem;
+}
+.rr-location-map-zoom button {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.rr-location-map-selection {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+.rr-location-map-selection .rr-location-map-pin-selected {
+  position: relative;
+  transform: none;
+  font-size: 27px;
+  line-height: 1;
+}
+.rr-location-map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 125px;
+  max-width: 210px;
+  padding: .45rem .65rem;
+  margin-bottom: .25rem;
+  border-radius: .5rem;
+  border: 1px solid #d8e0ee;
+  background: #fff;
+  color: #1a2f5e;
+  box-shadow: 0 2px 9px #10234433;
+  font-size: .75rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.rr-location-map-popup strong {
+  font-size: .85rem;
+}
+
+/* Only narrow-screen hero typography may wrap; approved logo sizes stay intact. */
+@media (max-width: 480px) {
+  main > div:first-child > .max-w-7xl > .flex > div:first-child {
+    min-width: 0;
+  }
+  main > div:first-child h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+  .rr-location-map-toolbar { align-items: flex-start; }
+}
+
+/* Increase pagination hit areas without replacing their existing icons. */
+.rr-dog-pagination button { min-width: 44px; min-height: 44px; }
+
+/* Restore a high-contrast keyboard ring over the search utility's outline reset. */
+.rr-search-input:focus-visible {
+  outline: 3px solid #087F8C;
+  outline-offset: 2px;
+}

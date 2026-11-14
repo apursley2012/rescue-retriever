@@ -1,0 +1,84 @@
+/*******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Styles long-form article pages without changing other pages.      |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+.article-detail-hero {
+  isolation: isolate;
+  background: radial-gradient(circle at 88% 25%, #2BBCD44C 0 4.8rem, #00000000 4.9rem),
+    radial-gradient(circle at 80% 75%, #F4792038 0 6rem, #00000000 6.1rem),
+    linear-gradient(118deg, #091a37 0%, #173a6f 64%, #1a4b72 100%);
+}
+
+.article-detail-hero::before,
+.article-detail-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid #FFFFFF21;
+  border-radius: 999px;
+}
+
+.article-detail-hero::before {
+  width: 24rem;
+  height: 24rem;
+  right: -7rem;
+  top: -12rem;
+}
+
+.article-detail-hero::after {
+  width: 15rem;
+  height: 15rem;
+  right: 4rem;
+  bottom: -10rem;
+}
+
+.article-reading-surface {
+  position: relative;
+}
+
+.article-reading-surface::before {
+  content: "";
+  position: absolute;
+  top: 2.25rem;
+  bottom: 2.25rem;
+  left: 0;
+  width: 4px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(#f47920, #2bbcd4 48%, #1a2f5e);
+}
+
+/* Readable full-article content when JavaScript has not yet loaded. */
+.rr-standalone-article {
+  max-width: 64rem;
+  margin: 2rem auto;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  overflow-wrap: anywhere;
+}
+.rr-standalone-article h2 {
+  color: #1a2f5e;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin: 2rem 0 0.75rem;
+}
+.rr-standalone-article h3 { margin: 1.5rem 0 0.6rem; color: #1a2f5e; }
+.rr-standalone-article p,
+.rr-standalone-article li { line-height: 1.85; margin-bottom: 1rem; color: #46546b; }
+.rr-standalone-article ul,
+.rr-standalone-article ol { padding-left: 1.75rem; list-style: revert; }
+.rr-article-summary { font-weight: 600; }
+.rr-article-more { max-width: 64rem; margin: 2rem auto; padding: 1rem; }
+.rr-article-more li { margin: 0.75rem 0; }
+.rr-article-more a, .rr-standalone-article a { color: #135e85; text-decoration: underline; }
+
+@media (max-width:639px) {
+  .article-reading-surface::before {
+    top: 1.75rem;
+    bottom: 1.75rem;
+    width: 3px;
+  }
+}
+
