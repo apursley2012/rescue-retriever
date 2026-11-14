@@ -5,7 +5,7 @@
  * | separately from data aggregation.                                          |
  * | Author: Alysha Pursley                                                     |
  * | Copyright (c) 2026 Alysha Pursley.                                         |
- * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.        |
  * +----------------------------------------------------------------------------+
  */
 import { b } from "../../assets/runtime-core.js";
