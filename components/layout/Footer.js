@@ -5,7 +5,7 @@
  * | project/source context.                                                    |
  * | Author: Alysha Pursley                                                     |
  * | Copyright (c) 2026 Alysha Pursley.                                         |
- * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * | Rights: All Rights Reseved.                                                |
  * +----------------------------------------------------------------------------+
  */
 import { j as e } from "../ui/accordion.js";
