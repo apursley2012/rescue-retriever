@@ -4,7 +4,8 @@
  * | Purpose: Creates accessible SVG icon components from Lucide path           |
  * | definitions and forwards styling and drawing properties.                   |
  * | Provenance: Recovered compiled or third-party integration code.            |
- * | Attribution: Original rights retained; see repository THIRD_PARTY_NOTICES.md.    |
+ * | Attribution: Original rights retained; see repository                      |
+ * | THIRD_PARTY_NOTICES.md.                                                    |
  * +----------------------------------------------------------------------------+
  */
 import { r as s } from "../hooks/use-mobile.js";
