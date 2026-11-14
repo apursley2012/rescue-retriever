@@ -4,7 +4,8 @@
  * | Purpose: Provides bundled React Router navigation, route matching, browser |
  * | history, and view-transition helpers.                                      |
  * | Provenance: Recovered compiled or third-party integration code.            |
- * | Attribution: Original rights retained; see repository THIRD_PARTY_NOTICES.md.    |
+ * | Attribution: Original rights retained; see repository                      |
+ * | THIRD_PARTY_NOTICES.md.                                                    |
  * +----------------------------------------------------------------------------+
  */
 import { r as i } from "../hooks/use-mobile.js";
