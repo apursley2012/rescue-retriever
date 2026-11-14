@@ -1,0 +1,388 @@
+/*******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | Rescue Retriever                                                           |
+ * | Purpose: Defines shared layout, responsive rules, accessibility helpers,   |
+ * | and fallback presentation.                                                 |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * | Rights: Proprietary original contributions; see repository LICENSE.         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+:root {
+  --rr-navy: #1A2F5E;
+  --rr-navy-dark: #0D1B38;
+  --rr-orange: #F47920;
+  --rr-orange-dark: #B84D00;
+  --rr-cyan: #2BBCD4;
+  --rr-text: #4A5B7A;
+  --rr-muted: #4A5B7A;
+  --rr-border: #D8E0EE;
+  --rr-surface: #FFFFFF;
+  --rr-background: #F6F8FB;
+}
+
+.rr-static-fallback {
+  min-height: 100vh;
+  background: var(--rr-background);
+  color: var(--rr-navy);
+}
+
+.rr-noscript-nav {
+  background: var(--rr-navy-dark);
+  color: #FFFFFF;
+  padding: 0.8rem 1rem;
+}
+
+.rr-noscript-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.rr-noscript-nav a {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rr-static-page {
+  width: min(76rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.rr-static-hero {
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  background: var(--rr-navy);
+  color: #FFFFFF;
+  padding: clamp(2rem, 6vw, 4.5rem);
+}
+
+.rr-static-kicker {
+  color: #FFD2B2;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rr-static-hero h1 {
+  margin: 0.4rem 0 0.75rem;
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1;
+}
+
+.rr-static-hero p {
+  max-width: 46rem;
+  margin: 0;
+  color: #E6EBF4;
+  line-height: 1.7;
+}
+
+.rr-static-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.rr-static-button {
+  display: inline-flex;
+  border: 0;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--rr-orange);
+  color: var(--rr-navy);
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rr-static-button:hover {
+  background: var(--rr-orange-dark);
+  color: #FFFFFF;
+}
+
+.rr-static-button.secondary {
+  background: #FFFFFF;
+  color: var(--rr-navy);
+}
+
+.rr-static-section {
+  margin-top: 2rem;
+}
+
+.rr-static-section > h2 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.rr-static-section > p,
+.rr-card p,
+.rr-card li,
+.rr-meta {
+  color: var(--rr-text);
+  line-height: 1.7;
+}
+
+.rr-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rr-card {
+  border: 1px solid var(--rr-border);
+  border-radius: 1rem;
+  background: var(--rr-surface);
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px #1A2F5E0D;
+}
+
+.rr-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+}
+
+.rr-stat {
+  border-top: 4px solid var(--rr-orange);
+}
+
+.rr-stat strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rr-criteria {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.rr-table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--rr-border);
+  border-radius: 1rem;
+  background: #FFFFFF;
+}
+
+.rr-static-table {
+  width: 100%;
+  min-width: 46rem;
+  border-collapse: collapse;
+}
+
+.rr-static-table th,
+.rr-static-table td {
+  border-bottom: 1px solid #EEF2F8;
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+}
+
+.rr-static-table th {
+  background: #EEF2F8;
+  color: var(--rr-navy);
+}
+
+.rr-static-table a {
+  color: var(--rr-orange-dark);
+  font-weight: 700;
+}
+
+.rr-static-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+  border: 1px solid var(--rr-border);
+  border-radius: 1rem;
+  background: #FFFFFF;
+  padding: 1rem;
+}
+
+.rr-static-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.rr-static-field label {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+
+.rr-static-field input,
+.rr-static-field select {
+  min-height: 44px;
+  border: 1px solid #AEBBD0;
+  border-radius: 0.65rem;
+  background: #FFFFFF;
+  color: var(--rr-navy);
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.rr-callout {
+  border-left: 4px solid var(--rr-cyan);
+  border-radius: 0.75rem;
+  background: #EAF9FC;
+  color: var(--rr-text);
+  padding: 1rem 1.1rem;
+}
+
+.rr-static-footer-note {
+  margin-top: 3rem;
+  border-top: 1px solid var(--rr-border);
+  padding-top: 1.2rem;
+  color: var(--rr-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .rr-static-page {
+    width: min(calc(100% - 1rem), 76rem);
+    padding-top: 1rem;
+  }
+
+  .rr-static-hero {
+    border-radius: 1rem;
+  }
+}
+
+/* Keyboard focus remains visible across both static fallbacks and enhanced views. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--rr-navy);
+  outline-offset: 3px;
+}
+
+:where(.rr-static-hero, .rr-noscript-nav, footer) :where(a, button):focus-visible {
+  outline-color: #FFFFFF;
+}
+
+/* Motion is decorative; reduced-motion users keep the same content and controls. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styling must remain visible on both light and dark page sections. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline-color: #087F8C;
+}
+
+/* Preserve readable data tables on narrow screens without clipping columns. */
+.rr-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hidden disclosure panels must not be reintroduced by utility display rules. */
+[hidden] {
+  display: none !important;
+}
+
+/* Comparable categorical summaries used on Dashboard and Analytics. */
+.rr-category-rows {
+  display: grid;
+  gap: 1rem;
+}
+.rr-category-context {
+  margin: 0 0 1.25rem;
+  color: #4A5B7A;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+.rr-category-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  color: #1A2F5E;
+  font-size: .875rem;
+  font-weight: 600;
+}
+.rr-category-number {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.rr-category-track {
+  margin-top: .35rem;
+  height: .7rem;
+  background: #EEF2F8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.rr-category-fill {
+  height: 100%;
+  background: #087F8C;
+  border-radius: inherit;
+}
+.rr-category-empty {
+  color: #4A5B7A;
+}
+@media (max-width: 420px) {
+  .rr-category-labels {
+    flex-wrap: wrap;
+    gap: .25rem .75rem;
+  }
+}
+
+.rr-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.rr-dog-table-scroll:focus-visible {
+  outline: 3px solid #087F8C;
+  outline-offset: -3px;
+}
+/* Make focus navigation work with the fixed site header. */
+#main-content, #rr-geolocation-map {
+  scroll-margin-top: 5.5rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}
+
+/* The existing focus-only skip link comes before the React navigation. */
+.skip-link:focus-visible { outline: 3px solid #F47920; outline-offset: 2px; }
+
+/* Keep the fixed header's expanded mobile menu reachable on short screens. */
+.rr-mobile-menu {
+  max-height: calc(100vh - 4rem);
+  max-height: calc(100dvh - 4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+/* The palette remains orange/navy; darker text-orange is legible on white. */
+header .rr-nav-brand-accent { color: #B84D00; }
+header [class~="text-[#F47920]"] { color: #B84D00; }
+footer [class~="text-[#7A8FA8]"] { color: #C7D5E8; }
+/* All pages have a visible keyboard destination for their skip link. */
+#main-content:focus { outline: none; }
