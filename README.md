@@ -7,7 +7,7 @@ Last Updated: November 2026
 
 <div align="center">
 
-<img src="./assets/logo.png" alt="Rescue Retriever logo featuring a golden dog and rescue life ring" width="65%" height=“auto”>
+<img src="./assets/logo.png" alt="Rescue Retriever logo featuring a golden dog and rescue life ring" width="512px" height=“auto”>
 
 <h1>Rescue Retriever 🦮</h1>
 
